@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "722013021729",
+    "project_id": "glassesgo-e00ba",
+    "storage_bucket": "glassesgo-e00ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722013021729:android:88443bd9c94439f805a560",
+        "android_client_info": {
+          "package_name": "com.example.glassesgo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrs_pUVXvnP8e6hR6dvRSQfqVXw5cPBRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
