@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:glassesgo/core/routes/names.dart';
 import 'package:glassesgo/core/routes/pages.dart';
 import 'package:glassesgo/main/global.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
             primaryColor: Colors.red,
             brightness: Brightness.light,
           ),
-
+          // initialRoute: ,
           onGenerateRoute: AppPages.GenerateRouteSettings,
 
           // home: const Welcome(),
