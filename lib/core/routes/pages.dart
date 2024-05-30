@@ -1,14 +1,16 @@
 // The UNIFICATION Of BlocProvider and routes and pages
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:glassesgo/bloc/reset_password/reset_password_bloc.dart';
 import 'package:glassesgo/bloc/sign_in/sign_in_bloc.dart';
 import 'package:glassesgo/bloc/sign_up/sign_up_bloc.dart';
 import 'package:glassesgo/bloc/splash_screen/bloc/splash_screen_bloc.dart';
 import 'package:glassesgo/bloc/welcome/welcome_bloc.dart';
 import 'package:glassesgo/core/routes/names.dart';
 import 'package:glassesgo/main/global.dart';
-import 'package:glassesgo/main/home.dart';
+import 'package:glassesgo/views/home_screen/screens/home.dart';
 import 'package:glassesgo/main.dart';
+import 'package:glassesgo/views/reset_password/screens/reset_screen.dart';
 import 'package:glassesgo/views/sign_in_screen/screens/sign_in.dart';
 import 'package:glassesgo/views/sign_up_screen/screens/sign_up.dart';
 import 'package:glassesgo/views/splash_screen/screens/splash_screen.dart';
@@ -24,14 +26,14 @@ class AppPages {
           create: (_) => WelcomeBloc(),
         ),
       ),
-      PageEntity(
-        route: AppRoutes.INITIAL,
-        page: const SplashScreen(),
-        bloc: BlocProvider(
-          create: (_) => SplashScreenBloc(),
-          child: const SplashScreen(),
-        ),
-      ),
+      // PageEntity(
+      //   route: AppRoutes.INITIAL,
+      //   page: const SplashScreen(),
+      //   bloc: BlocProvider(
+      //     create: (_) => SplashScreenBloc(),
+      //     child: const SplashScreen(),
+      //   ),
+      // ),
       PageEntity(
         route: AppRoutes.SIGN_IN,
         page: const SignIn(),
@@ -52,6 +54,13 @@ class AppPages {
         // bloc: BlocProvider(
         //   create: (_) => ApplicationBl(),
         // ),
+      ),
+      PageEntity(
+        route: AppRoutes.RESET_PASSWORD,
+        page: const ResetScreen(),
+        bloc: BlocProvider(
+          create: (_) => ResetPasswordBloc(),
+        ),
       )
     ];
   }
