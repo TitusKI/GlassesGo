@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppColors {
   /// white background
   static const Color primaryBackground = Color.fromARGB(255, 255, 255, 255);
@@ -14,7 +16,7 @@ class AppColors {
   /// main text color black
   static const Color primaryText = Color.fromARGB(255, 0, 0, 0);
   // video background color
-  static const Color primary_bg = Color.fromARGB(210, 32, 47, 62);
+  static const Color primary_bg = Color.fromARGB(255, 30, 116, 33);
 
   /// main widget text color white
   static const Color primaryElementText = Color.fromARGB(255, 255, 255, 255);
@@ -26,7 +28,7 @@ class AppColors {
       Color.fromARGB(255, 170, 170, 170);
 
   static const Color primaryFourthElementText =
-      Color.fromARGB(255, 204, 204, 204);
+      Color.fromARGB(255, 242, 240, 240);
   //state color
   static const Color primaryElementStatus = Color.fromARGB(255, 88, 174, 127);
 
