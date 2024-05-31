@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:glassesgo/bloc/welcome/welcome_bloc.dart';
@@ -119,42 +120,42 @@ class _WelcomeState extends State<Welcome> {
             ),
           ),
         ),
-        Container(
-          margin: EdgeInsets.only(top: 100.h, left: 25.w, right: 25.w),
-          width: 325.w,
-          height: 50.h,
-          decoration: BoxDecoration(
-            color: AppColors.primaryElement,
-            borderRadius: BorderRadius.all(Radius.circular(15.w)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.1),
-                spreadRadius: 1,
-                blurRadius: 2,
-                offset: Offset(0, 1),
-              ),
-            ],
-          ),
-          child: GestureDetector(
-            onTap: () {
-              if (index < 3) {
-                pageController.animateToPage(index,
-                    duration: const Duration(milliseconds: 500),
-                    curve: Curves.easeIn);
-              } else {
-                // Navigator.of(context).push(
-                //   MaterialPageRoute(
-                //     builder: (context) => const MyHomePage(),
-                //   ),
-                // );
-                Global.storageService
-                    .setBool(AppConstant.STORAGE_DEVICE_OPEN_FIRST_TIME, true);
-                print(
-                    "The value is: ${Global.storageService.getDeviceFirstOpen()}");
-                Navigator.of(context)
-                    .pushNamedAndRemoveUntil("/sign_in", (route) => false);
-              }
-            },
+        GestureDetector(
+          onTap: () {
+            if (index < 3) {
+              pageController.animateToPage(index,
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeIn);
+            } else {
+              // Navigator.of(context).push(
+              //   MaterialPageRoute(
+              //     builder: (context) => const MyHomePage(),
+              //   ),
+              // );
+              Global.storageService
+                  .setBool(AppConstant.STORAGE_DEVICE_OPEN_FIRST_TIME, true);
+              print(
+                  "The value is: ${Global.storageService.getDeviceFirstOpen()}");
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil("/sign_in", (route) => false);
+            }
+          },
+          child: Container(
+            margin: EdgeInsets.only(top: 100.h, left: 25.w, right: 25.w),
+            width: 325.w,
+            height: 50.h,
+            decoration: BoxDecoration(
+              color: AppColors.primaryElement,
+              borderRadius: BorderRadius.all(Radius.circular(15.w)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.1),
+                  spreadRadius: 1,
+                  blurRadius: 2,
+                  offset: Offset(0, 1),
+                ),
+              ],
+            ),
             child: Center(
               child: Text(
                 buttonName,
