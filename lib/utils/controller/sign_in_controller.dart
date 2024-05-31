@@ -1,9 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:glassesgo/bloc/sign_in/sign_in_bloc.dart';
 import 'package:glassesgo/main/global.dart';
+import 'package:glassesgo/views/home_screen/screens/home.dart';
 import 'package:glassesgo/views/common/values/constant.dart';
 import 'package:glassesgo/views/common/widgets/flutter_toast.dart';
 import 'package:regexpattern/regexpattern.dart';
@@ -50,8 +52,13 @@ class SignInController {
           if (user != null) {
             Global.storageService
                 .setString(AppConstant.STORAGE_USER_TOKEN_KEY, "12345678");
-            Navigator.of(context)
-                .pushNamedAndRemoveUntil("/movie_list", ((route) => false));
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => const MyHomePage(title: 'GlassesGo'),
+              ),
+            );
+            // Navigator.of(context)
+            //     .pushNamedAndRemoveUntil("/", ((route) => false));
             toastInfo(msg: "User exist");
             return;
           } else {
