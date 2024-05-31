@@ -31,13 +31,13 @@ class _SignUpState extends State<SignUp> {
                   decoration: const BoxDecoration(
                       gradient: LinearGradient(
                     colors: [
-                      Colors.white,
-                      Colors.greenAccent,
-                      Colors.white,
-                      Colors.white10
+                      AppColors.primary_bg,
+                      AppColors.primaryBackground,
+                      AppColors.primaryBackground,
+                      AppColors.primaryBackground
                     ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                   )),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

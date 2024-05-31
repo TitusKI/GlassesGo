@@ -29,9 +29,13 @@ class _SignInState extends State<SignIn> {
               child: Container(
                 decoration: const BoxDecoration(
                     gradient: LinearGradient(
-                  colors: [Colors.greenAccent, Colors.white, Colors.grey],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+                  colors: [
+                    AppColors.primary_bg,
+                    AppColors.primaryBackground,
+                    AppColors.primaryBackground,
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
                 )),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
