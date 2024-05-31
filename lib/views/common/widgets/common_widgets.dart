@@ -72,7 +72,7 @@ Widget buildTextField(String hintText, String textType, String iconName,
     height: 50.h,
     margin: EdgeInsets.only(bottom: 20.h),
     decoration: BoxDecoration(
-      color: AppColors.primaryBackground,
+      color: AppColors.primaryFourthElementText,
       borderRadius: BorderRadius.all(
         Radius.circular(15.w),
       ),
@@ -98,14 +98,18 @@ Widget buildTextField(String hintText, String textType, String iconName,
             keyboardType: TextInputType.multiline,
             decoration: InputDecoration(
               hintText: hintText,
-              border: const OutlineInputBorder(
+              border: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: textType == 'search'
+                      ? AppColors.primaryFourthElementText
+                      : Colors.transparent,
                 ),
               ),
-              focusedBorder: const OutlineInputBorder(
+              focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(
-                  color: Colors.transparent,
+                  color: textType == "search"
+                      ? AppColors.primaryBackground
+                      : Colors.transparent,
                 ),
               ),
               enabledBorder: const OutlineInputBorder(
@@ -168,7 +172,7 @@ Widget buildLogInAndRegButton(
             height: 50.h,
             decoration: BoxDecoration(
                 color: buttonType == "login"
-                    ? AppColors.primaryElement
+                    ? AppColors.primary_bg
                     : AppColors.primaryBackground,
                 borderRadius: BorderRadius.circular(15.w),
                 border: Border.all(
